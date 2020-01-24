@@ -69,3 +69,21 @@ else if((fourthAnswerLower === 'n') || (fourthAnswerLower === 'no'))
 else{
   alert('I\'m sorry. Your response is in an invalid format.');
 }
+
+var fifthAnswer = prompt('I am a die hard St. Louis Cardinals fan.');
+var fifthAnswerLower = fifthAnswer.toLowerCase();
+if((fifthAnswerLower === 'y') || (fifthAnswerLower === 'yes'))
+{
+  console.log(fifthAnswer + ' is correct');
+  alert('That is correct, the Cardinals are my favorite sports team.');
+}
+else if((fifthAnswerLower === 'n') || (fifthAnswerLower === 'no'))
+{
+  console.log(fifthAnswer + ' is incorrect');
+  alert('The Cardinals actually are my favorite baseball team.');
+}
+else{
+  alert('I\'m sorry. Your response is in an invalid format.');
+}
+
+alert('Thanks for playing ' + userName + '! Have a great day!');
