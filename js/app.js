@@ -59,7 +59,7 @@ var fourthAnswerLower = fourthAnswer.toLowerCase();
 if((fourthAnswerLower === 'y') || (fourthAnswerLower === 'yes'))
 {
   console.log(fourthAnswer + ' is correct');
-  alert('That is correct, tiger are my favorite animal.');
+  alert('That is correct, tigers are my favorite animal.');
 }
 else if((fourthAnswerLower === 'n') || (fourthAnswerLower === 'no'))
 {
