@@ -3,6 +3,7 @@
 ## Synopsis ##
 
 This is a class development project that will be continually updated as we learn new coding practices over a 10 week period.
+For the first update to the program I added two additional qustions. The first was a guessing game that allowed the user 4 attempts to guess a randomly generated number between 1 and 10. The next question stored a list of states in an array. The user was then allowed 6 guesses. I applied a tally to track how many of the 7 questions the user got correct and then reported that to them upon completion.
 
 ## Code Example ##
 
