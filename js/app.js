@@ -4,14 +4,14 @@ var tally = 0;
 var userName = prompt('What is your name?');
 console.log('The user\'s name is ' + userName);
 alert('Hello ' + userName + '! Welcome to my site.');
-alert('Let\'s play a game to learn more about me.');
+alert('Let\'s play a game to learn more about me.\n Your answers should be in a Yes/No format.');
 
-var firstAnswer = prompt('I have two dogs.');
+var firstAnswer = prompt('Do I have two dogs?');
 var firstAnswerLower = firstAnswer.toLowerCase();
 if((firstAnswerLower === 'y') || (firstAnswerLower === 'yes'))
 {
   console.log(firstAnswer + ' is correct');
-  alert('That is correct, I have two dogs');
+  alert('That is correct, I have two dogs. One is a sheltie and the other is a german shepard/golden retriever mix.');
   tally ++;
 }
 else if((firstAnswerLower === 'n') || (firstAnswerLower === 'no'))
@@ -23,7 +23,7 @@ else {
   alert('I\'m sorry. Your response is in an invalid format.');
 }
 
-var secondAnswer = prompt('I have three kids who are 17, 13, and 12.');
+var secondAnswer = prompt('Do I have three kids who are 17, 13, and 12?');
 var secondAnswerLower = secondAnswer.toLowerCase();
 if((secondAnswerLower === 'y') || (secondAnswerLower === 'yes'))
 {
@@ -41,7 +41,7 @@ else
   alert('I\'m sorry. Your response is in an invalid format.');
 }
 
-var thirdAnswer = prompt('Taco is my favorite pizza.');
+var thirdAnswer = prompt('Is Taco my favorite pizza?');
 var thirdAnswerLower = thirdAnswer.toLowerCase();
 if((thirdAnswerLower === 'y') || (thirdAnswerLower === 'yes'))
 {
@@ -58,7 +58,7 @@ else{
   alert('I\'m sorry. Your response is in an invalid format.');
 }
 
-var fourthAnswer = prompt('Tigers are my favorite animal.');
+var fourthAnswer = prompt('Are Tigers my favorite animal?');
 var fourthAnswerLower = fourthAnswer.toLowerCase();
 if((fourthAnswerLower === 'y') || (fourthAnswerLower === 'yes'))
 {
@@ -75,7 +75,7 @@ else{
   alert('I\'m sorry. Your response is in an invalid format.');
 }
 
-var fifthAnswer = prompt('I am a die hard St. Louis Cardinals fan.');
+var fifthAnswer = prompt('Am I a die hard St. Louis Cardinals fan?');
 var fifthAnswerLower = fifthAnswer.toLowerCase();
 if((fifthAnswerLower === 'y') || (fifthAnswerLower === 'yes'))
 {
@@ -95,7 +95,7 @@ else{
 var response = confirm('Let\'s play a guessing game');
 if(response === true)
 {
-  alert('You have 4 tries to guess a number between 1 and 10');
+  alert('You have 4 tries to guess a number between 1 and 10.');
   var number = Math.floor((Math.random() * 10) + 1);
   console.log(number);
   for(var i = 0; i < 4; i++)
@@ -128,7 +128,7 @@ else
   alert('May be next time');
 }
 
-alert('I have several states that I enjoy visiting or vacationing in. Try guessing one. You will have 6 attempts.');
+alert('I have several states that I enjoy visiting or vacationing in. You will have 6 attempts to try guessing one.');
 var cities = ['missouri', 'florida', 'california', 'nevada', 'wisconsin'];
 var len = cities.length;
 for(var j = 0; j < 6; j++)
