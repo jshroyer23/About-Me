@@ -24,25 +24,25 @@ function question1() {
     alert('I\'m sorry. Your response is in an invalid format.');
   }
 }
-
-var secondAnswer = prompt('Do I have three kids who are 17, 13, and 12?');
-var secondAnswerLower = secondAnswer.toLowerCase();
-if((secondAnswerLower === 'y') || (secondAnswerLower === 'yes'))
-{
-  console.log(secondAnswer + ' is correct');
-  alert('That is correct, I have three kids and those are their ages.');
-  tally ++;
+function question2(){
+  var secondAnswer = prompt('Do I have three kids who are 17, 13, and 12?');
+  var secondAnswerLower = secondAnswer.toLowerCase();
+  if((secondAnswerLower === 'y') || (secondAnswerLower === 'yes'))
+  {
+    console.log(secondAnswer + ' is correct');
+    alert('That is correct, I have three kids and those are their ages.');
+    tally ++;
+  }
+  else if((secondAnswerLower === 'n') || (secondAnswerLower === 'no'))
+  {
+    console.log(secondAnswer + ' is incorrect');
+    alert('I actually do have three kids who are 17, 13, and 12.');
+  }
+  else
+  {
+    alert('I\'m sorry. Your response is in an invalid format.');
+  }
 }
-else if((secondAnswerLower === 'n') || (secondAnswerLower === 'no'))
-{
-  console.log(secondAnswer + ' is incorrect');
-  alert('I actually do have three kids who are 17, 13, and 12.');
-}
-else
-{
-  alert('I\'m sorry. Your response is in an invalid format.');
-}
-
 var thirdAnswer = prompt('Is Taco my favorite pizza?');
 var thirdAnswerLower = thirdAnswer.toLowerCase();
 if((thirdAnswerLower === 'y') || (thirdAnswerLower === 'yes'))
@@ -172,3 +172,4 @@ for(var j = 0; j < 6; j++)
 var score = Math.round((tally / 7) * 100);
 alert('Thanks for playing ' + userName + '! You got ' + tally + ' questions correct. Your score is ' + score + '%. Have a great day!');
 question1();
+question2();
