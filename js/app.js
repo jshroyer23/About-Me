@@ -61,23 +61,24 @@ function question3(){
     alert('I\'m sorry. Your response is in an invalid format.');
   }
 }
-var fourthAnswer = prompt('Are Tigers my favorite animal?');
-var fourthAnswerLower = fourthAnswer.toLowerCase();
-if((fourthAnswerLower === 'y') || (fourthAnswerLower === 'yes'))
-{
-  console.log(fourthAnswer + ' is correct');
-  alert('That is correct, tigers are my favorite animal.');
-  tally ++;
+function question4(){
+  var fourthAnswer = prompt('Are Tigers my favorite animal?');
+  var fourthAnswerLower = fourthAnswer.toLowerCase();
+  if((fourthAnswerLower === 'y') || (fourthAnswerLower === 'yes'))
+  {
+    console.log(fourthAnswer + ' is correct');
+    alert('That is correct, tigers are my favorite animal.');
+    tally ++;
+  }
+  else if((fourthAnswerLower === 'n') || (fourthAnswerLower === 'no'))
+  {
+    console.log(fourthAnswer + ' is incorrect');
+    alert('Tigers actually are my favorite animal.');
+  }
+  else{
+    alert('I\'m sorry. Your response is in an invalid format.');
+  }
 }
-else if((fourthAnswerLower === 'n') || (fourthAnswerLower === 'no'))
-{
-  console.log(fourthAnswer + ' is incorrect');
-  alert('Tigers actually are my favorite animal.');
-}
-else{
-  alert('I\'m sorry. Your response is in an invalid format.');
-}
-
 var fifthAnswer = prompt('Am I a die hard St. Louis Cardinals fan?');
 var fifthAnswerLower = fifthAnswer.toLowerCase();
 if((fifthAnswerLower === 'y') || (fifthAnswerLower === 'yes'))
@@ -175,3 +176,4 @@ alert('Thanks for playing ' + userName + '! You got ' + tally + ' questions corr
 question1();
 question2();
 question3();
+question4();
