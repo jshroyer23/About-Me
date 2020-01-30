@@ -134,51 +134,54 @@ function question6(){
     alert('Maybe next time');
   }
 }
-alert('I have several states that I enjoy visiting or vacationing in. You will have 6 attempts to try guessing one.');
-var cities = ['missouri', 'florida', 'california', 'nevada', 'wisconsin'];
-var len = cities.length;
-for(var j = 0; j < 6; j++)
-{
-  var seventhAnswer = prompt('What is your guess?');
-  var seventhAnswerLow = seventhAnswer.toLowerCase();
-  console.log(seventhAnswerLow);
-  console.log('j = ' + j);
-  var inArray;
-  for(var k = 0; k < len; k ++)
+function question7(){
+  alert('I have several states that I enjoy visiting or vacationing in. You will have 6 attempts to try guessing one.');
+  var cities = ['missouri', 'florida', 'california', 'nevada', 'wisconsin'];
+  var len = cities.length;
+  for(var j = 0; j < 6; j++)
   {
-    console.log('k = ' + k + ' ' + cities[k] + ' ' + inArray);
-    if(seventhAnswerLow === cities[k])
+    var seventhAnswer = prompt('What is your guess?');
+    var seventhAnswerLow = seventhAnswer.toLowerCase();
+    console.log(seventhAnswerLow);
+    console.log('j = ' + j);
+    var inArray;
+    for(var k = 0; k < len; k ++)
     {
-      inArray = true;
+      console.log('k = ' + k + ' ' + cities[k] + ' ' + inArray);
+      if(seventhAnswerLow === cities[k])
+      {
+        inArray = true;
+        break;
+      }
+      else
+      {
+        inArray = false;
+      }
+    }
+    if(j === 5 && inArray === false)
+    {
+      alert('I\'m sorry, that was 6 guesses. The correct states are Missouri, Florida, California, Nevada, and Wisconsin.');
       break;
     }
-    else
+    else if(inArray === true)
     {
-      inArray = false;
+      alert('That is correct. My favorite states to visit include Missouri, Florida, California, Nevada, and Wisconsin.');
+      tally ++;
+      break;
+    }
+    else if(inArray === false)
+    {
+      alert('That is incorrect. Guess again.');
     }
   }
-  if(j === 5 && inArray === false)
-  {
-    alert('I\'m sorry, that was 6 guesses. The correct states are Missouri, Florida, California, Nevada, and Wisconsin.');
-    break;
-  }
-  else if(inArray === true)
-  {
-    alert('That is correct. My favorite states to visit include Missouri, Florida, California, Nevada, and Wisconsin.');
-    tally ++;
-    break;
-  }
-  else if(inArray === false)
-  {
-    alert('That is incorrect. Guess again.');
-  }
+  var score = Math.round((tally / 7) * 100);
+  alert('Thanks for playing ' + userName + '! You got ' + tally + ' questions correct. Your score is ' + score + '%. Have a great day!');
 }
-var score = Math.round((tally / 7) * 100);
-alert('Thanks for playing ' + userName + '! You got ' + tally + ' questions correct. Your score is ' + score + '%. Have a great day!');
 question1();
 question2();
 question3();
 question4();
 question5();
 question6();
+question7();
 
