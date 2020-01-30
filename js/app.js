@@ -6,21 +6,23 @@ console.log('The user\'s name is ' + userName);
 alert('Hello ' + userName + '! Welcome to my site.');
 alert('Let\'s play a game to learn more about me.\n Your answers should be in a Yes/No format.');
 
-var firstAnswer = prompt('Do I have two dogs?');
-var firstAnswerLower = firstAnswer.toLowerCase();
-if((firstAnswerLower === 'y') || (firstAnswerLower === 'yes'))
-{
-  console.log(firstAnswer + ' is correct');
-  alert('That is correct, I have two dogs. One is a sheltie and the other is a german shepard/golden retriever mix.');
-  tally ++;
-}
-else if((firstAnswerLower === 'n') || (firstAnswerLower === 'no'))
-{
-  console.log(firstAnswer + ' is incorrect');
-  alert('I actually do have two dogs');
-}
-else {
-  alert('I\'m sorry. Your response is in an invalid format.');
+function question1() {
+  var firstAnswer = prompt('Do I have two dogs?');
+  var firstAnswerLower = firstAnswer.toLowerCase();
+  if((firstAnswerLower === 'y') || (firstAnswerLower === 'yes'))
+  {
+    console.log(firstAnswer + ' is correct');
+    alert('That is correct, I have two dogs. One is a sheltie and the other is a german shepard/golden retriever mix.');
+    tally ++;
+  }
+  else if((firstAnswerLower === 'n') || (firstAnswerLower === 'no'))
+  {
+    console.log(firstAnswer + ' is incorrect');
+    alert('I actually do have two dogs');
+  }
+  else {
+    alert('I\'m sorry. Your response is in an invalid format.');
+  }
 }
 
 var secondAnswer = prompt('Do I have three kids who are 17, 13, and 12?');
@@ -169,3 +171,4 @@ for(var j = 0; j < 6; j++)
 }
 var score = Math.round((tally / 7) * 100);
 alert('Thanks for playing ' + userName + '! You got ' + tally + ' questions correct. Your score is ' + score + '%. Have a great day!');
+question1();
