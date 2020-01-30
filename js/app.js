@@ -43,23 +43,24 @@ function question2(){
     alert('I\'m sorry. Your response is in an invalid format.');
   }
 }
-var thirdAnswer = prompt('Is Taco my favorite pizza?');
-var thirdAnswerLower = thirdAnswer.toLowerCase();
-if((thirdAnswerLower === 'y') || (thirdAnswerLower === 'yes'))
-{
-  console.log(thirdAnswer + ' is correct');
-  alert('That is correct, taco is my favorite pizza.');
-  tally ++;
+function question3(){
+  var thirdAnswer = prompt('Is Taco my favorite pizza?');
+  var thirdAnswerLower = thirdAnswer.toLowerCase();
+  if((thirdAnswerLower === 'y') || (thirdAnswerLower === 'yes'))
+  {
+    console.log(thirdAnswer + ' is correct');
+    alert('That is correct, taco is my favorite pizza.');
+    tally ++;
+  }
+  else if((thirdAnswerLower === 'n') || (thirdAnswerLower === 'no'))
+  {
+    console.log(thirdAnswer + ' is incorrect');
+    alert('Taco actually is my favorite pizza.');
+  }
+  else{
+    alert('I\'m sorry. Your response is in an invalid format.');
+  }
 }
-else if((thirdAnswerLower === 'n') || (thirdAnswerLower === 'no'))
-{
-  console.log(thirdAnswer + ' is incorrect');
-  alert('Taco actually is my favorite pizza.');
-}
-else{
-  alert('I\'m sorry. Your response is in an invalid format.');
-}
-
 var fourthAnswer = prompt('Are Tigers my favorite animal?');
 var fourthAnswerLower = fourthAnswer.toLowerCase();
 if((fourthAnswerLower === 'y') || (fourthAnswerLower === 'yes'))
@@ -173,3 +174,4 @@ var score = Math.round((tally / 7) * 100);
 alert('Thanks for playing ' + userName + '! You got ' + tally + ' questions correct. Your score is ' + score + '%. Have a great day!');
 question1();
 question2();
+question3();
