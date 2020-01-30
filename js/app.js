@@ -97,42 +97,43 @@ function question5(){
     alert('I\'m sorry. Your response is in an invalid format.');
   }
 }
-var response = confirm('Let\'s play a guessing game');
-if(response === true)
-{
-  alert('You have 4 tries to guess a number between 1 and 10.');
-  var number = Math.floor((Math.random() * 10) + 1);
-  console.log(number);
-  for(var i = 0; i < 4; i++)
+function question6(){
+  var response = confirm('Let\'s play a guessing game');
+  if(response === true)
   {
-    console.log('i = ' + i);
-    var sixthAnswer = prompt('What is your guess?');
-    if(i === 3 && sixthAnswer !== number.toString())
+    alert('You have 4 tries to guess a number between 1 and 10.');
+    var number = Math.floor((Math.random() * 10) + 1);
+    console.log(number);
+    for(var i = 0; i < 4; i++)
     {
-      alert('I\'m sorry, that was 4 guesses. The correct number is ' + number);
-      break;
-    }
-    else if(sixthAnswer === number.toString())
-    {
-      alert('You are correct, the number is ' + number);
-      tally ++;
-      break;
-    }
-    else if(sixthAnswer < number)
-    {
-      alert('Too low');
-    }
-    else if(sixthAnswer > number)
-    {
-      alert('Too high');
+      console.log('i = ' + i);
+      var sixthAnswer = prompt('What is your guess?');
+      if(i === 3 && sixthAnswer !== number.toString())
+      {
+        alert('I\'m sorry, that was 4 guesses. The correct number is ' + number);
+        break;
+      }
+      else if(sixthAnswer === number.toString())
+      {
+        alert('You are correct, the number is ' + number);
+        tally ++;
+        break;
+      }
+      else if(sixthAnswer < number)
+      {
+        alert('Too low');
+      }
+      else if(sixthAnswer > number)
+      {
+        alert('Too high');
+      }
     }
   }
+  else
+  {
+    alert('Maybe next time');
+  }
 }
-else
-{
-  alert('May be next time');
-}
-
 alert('I have several states that I enjoy visiting or vacationing in. You will have 6 attempts to try guessing one.');
 var cities = ['missouri', 'florida', 'california', 'nevada', 'wisconsin'];
 var len = cities.length;
@@ -179,4 +180,5 @@ question2();
 question3();
 question4();
 question5();
+question6();
 
