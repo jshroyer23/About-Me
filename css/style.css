@@ -2,10 +2,39 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
-    color:white;
-    background-color: rgb(63, 95, 67);
+    color: rgb(13, 35, 63);
+    background-color: rgb(225 31 58);
 }
 h2{
-    color: white;
-    background-color: rgb(63, 69, 120);
+    color: rgb(13, 35, 63);
+    background-color: rgb(225 31 58);
+}
+.centered {
+    text-align: center;
+}
+#cards {
+    float: right;
+    height: 250px;
+    width: 250px;
+}
+#movie {
+    display: inline-block;
+    width:380px;
+    margin:0 10px 0 20px;
+    border:solid 3px rgb(225 31 58);
+    background:rgb(51, 78, 112);
+}
+#work {
+    display: inline-block;
+    width:380px;
+    margin:0 10px;
+    border:solid 3px rgb(225 31 58);
+    background:rgb(51, 78, 112);
+}
+#education {
+    display: inline-block;
+    width:380px;
+    margin:0 20px 0 10px;
+    border:solid 3px rgb(225 31 58);
+    background:rgb(51, 78, 112);
 }
