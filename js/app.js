@@ -2,7 +2,6 @@
 
 var tally = 0;
 var userName = prompt('What is your name?');
-console.log('The user\'s name is ' + userName);
 alert('Hello ' + userName + '! Welcome to my site.');
 alert('Let\'s play a game to learn more about me.\n Your answers should be in a Yes/No format.');
 
@@ -11,13 +10,11 @@ function question1() {
   var firstAnswerLower = firstAnswer.toLowerCase();
   if((firstAnswerLower === 'y') || (firstAnswerLower === 'yes'))
   {
-    console.log(firstAnswer + ' is correct');
     alert('That is correct, I have two dogs. One is a sheltie and the other is a german shepard/golden retriever mix.');
     tally ++;
   }
   else if((firstAnswerLower === 'n') || (firstAnswerLower === 'no'))
   {
-    console.log(firstAnswer + ' is incorrect');
     alert('I actually do have two dogs');
   }
   else {
@@ -29,13 +26,11 @@ function question2(){
   var secondAnswerLower = secondAnswer.toLowerCase();
   if((secondAnswerLower === 'y') || (secondAnswerLower === 'yes'))
   {
-    console.log(secondAnswer + ' is correct');
     alert('That is correct, I have three kids and those are their ages.');
     tally ++;
   }
   else if((secondAnswerLower === 'n') || (secondAnswerLower === 'no'))
   {
-    console.log(secondAnswer + ' is incorrect');
     alert('I actually do have three kids who are 17, 13, and 12.');
   }
   else
@@ -48,13 +43,11 @@ function question3(){
   var thirdAnswerLower = thirdAnswer.toLowerCase();
   if((thirdAnswerLower === 'y') || (thirdAnswerLower === 'yes'))
   {
-    console.log(thirdAnswer + ' is correct');
     alert('That is correct, taco is my favorite pizza.');
     tally ++;
   }
   else if((thirdAnswerLower === 'n') || (thirdAnswerLower === 'no'))
   {
-    console.log(thirdAnswer + ' is incorrect');
     alert('Taco actually is my favorite pizza.');
   }
   else{
@@ -66,13 +59,11 @@ function question4(){
   var fourthAnswerLower = fourthAnswer.toLowerCase();
   if((fourthAnswerLower === 'y') || (fourthAnswerLower === 'yes'))
   {
-    console.log(fourthAnswer + ' is correct');
     alert('That is correct, tigers are my favorite animal.');
     tally ++;
   }
   else if((fourthAnswerLower === 'n') || (fourthAnswerLower === 'no'))
   {
-    console.log(fourthAnswer + ' is incorrect');
     alert('Tigers actually are my favorite animal.');
   }
   else{
@@ -84,13 +75,11 @@ function question5(){
   var fifthAnswerLower = fifthAnswer.toLowerCase();
   if((fifthAnswerLower === 'y') || (fifthAnswerLower === 'yes'))
   {
-    console.log(fifthAnswer + ' is correct');
     alert('That is correct, the Cardinals are my favorite sports team.');
     tally ++;
   }
   else if((fifthAnswerLower === 'n') || (fifthAnswerLower === 'no'))
   {
-    console.log(fifthAnswer + ' is incorrect');
     alert('The Cardinals actually are my favorite baseball team.');
   }
   else{
@@ -103,10 +92,8 @@ function question6(){
   {
     alert('You have 4 tries to guess a number between 1 and 10.');
     var number = Math.floor((Math.random() * 10) + 1);
-    console.log(number);
     for(var i = 0; i < 4; i++)
     {
-      console.log('i = ' + i);
       var sixthAnswer = prompt('What is your guess?');
       if(i === 3 && sixthAnswer !== number.toString())
       {
@@ -142,12 +129,9 @@ function question7(){
   {
     var seventhAnswer = prompt('What is your guess?');
     var seventhAnswerLow = seventhAnswer.toLowerCase();
-    console.log(seventhAnswerLow);
-    console.log('j = ' + j);
     var inArray;
     for(var k = 0; k < len; k ++)
     {
-      console.log('k = ' + k + ' ' + cities[k] + ' ' + inArray);
       if(seventhAnswerLow === cities[k])
       {
         inArray = true;
